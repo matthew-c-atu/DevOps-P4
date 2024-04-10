@@ -5,7 +5,6 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
 
 jobs:
@@ -15,7 +14,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x, 16.x, 18.x, 20, 21]
+        os: [ubuntu-latest, windows]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
